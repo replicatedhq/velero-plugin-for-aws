@@ -1,0 +1,1 @@
+Bug fix: omit the PutObject Tagging field when no object tags are configured, allowing S3-compatible storage such as Cloudflare R2 to accept backup objects.

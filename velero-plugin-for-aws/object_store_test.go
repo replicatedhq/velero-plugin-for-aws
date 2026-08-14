@@ -249,3 +249,11 @@ func TestValidChecksumAlg(t *testing.T) {
 		})
 	}
 }
+
+func TestBuildPutObjectInputOmitsEmptyTagging(t *testing.T) {
+	input := (&ObjectStore{}).buildPutObjectInput("bucket", "key", nil)
+	require.Nil(t, input.Tagging)
+
+	input = (&ObjectStore{tagging: "key=value"}).buildPutObjectInput("bucket", "key", nil)
+	require.Equal(t, aws.String("key=value"), input.Tagging)
+}
