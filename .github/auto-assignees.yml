@@ -3,17 +3,14 @@
 addAssignees: author
 
 reviewers:
-  # The default reviewers
+  # Default reviewers for the Replicated fork.
   defaults:
     - maintainers
 
   groups:
     maintainers:
-      - sseago
-      - reasonerjt
-      - ywk253100
-      - blackpiglet
-      - shubham-pampattiwar
+      - divolgin
+      - sgalsaleh
 
 options:
   ignore_draft: true
